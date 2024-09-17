@@ -100,7 +100,7 @@ fi
 echo -e "\033[32mdocker installed\033[0m"
 
 echo -e "\033[36m(3/8)---- check　docker-compose ----\033[0m"
-check_docker_compose=`docker-compose -v`
+check_docker_compose=`docker compose versions`
 if [ "$check_docker_compose" ]
 	then echo "$check_docker_compose"
 else
