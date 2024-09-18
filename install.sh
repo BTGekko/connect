@@ -19,15 +19,15 @@ echo " "
 
 echo -e "\033[36m--- Download config files---\033[0m"
 echo " "
-curl -o init.sh https://raw.githubusercontent.com/nuclias-connect/connect/dev/init.sh
-curl -o docker-compose.yml https://raw.githubusercontent.com/nuclias-connect/connect/dev/docker-compose.yml
-curl -o entrypoint-initdb.sh https://raw.githubusercontent.com/nuclias-connect/connect/dev/entrypoint-initdb.sh
-curl -o appconfig.json https://raw.githubusercontent.com/nuclias-connect/connect/dev/appconfig.json
+curl -o init.sh https://github.com/BTGekko/connect/blob/master/init.sh
+curl -o docker-compose.yml https://github.com/BTGekko/connect/blob/master/docker-compose.yml
+curl -o entrypoint-initdb.sh https://github.com/BTGekko/connect/blob/master/entrypoint-initdb.sh
+curl -o appconfig.json https://github.com/BTGekko/connect/blob/master/appconfig.json
 if [ ! -d $TMP_NUCLIAS_CONNECT_config ];then
   mkdir -p $TMP_NUCLIAS_CONNECT_config
 fi
 cd $TMP_NUCLIAS_CONNECT_config
-curl -o systemconfig.json https://raw.githubusercontent.com/nuclias-connect/connect/dev/config/systemconfig.json
+curl -o systemconfig.json https://github.com/BTGekko/connect/blob/master/config/systemconfig.json
 cd $TMP_NUCLIAS_CONNECT
 echo -e "\033[32m--- Download Complete\033[0m"
 echo " "
